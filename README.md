@@ -14,7 +14,7 @@ A simple yet effective authentication system in Laravel with role-based access c
 1. **Clone the repository:**
 
 ```bash
-https://github.com/yourusername/rolewise-auth-system.git
+https://github.com/ESE-Wahaj/roles
 cd rolewise-auth-system
 ```
 
