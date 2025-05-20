@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\SuoerAdmin;
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -67,7 +69,7 @@ class AdminController extends Controller
         //
         $id= $request->edit;
         $admindashboard = Admin::where('id', $id)->first();
-            $pList = Primary::all();
+        $pList = SuoerAdmin::all();
         return view ('dashboards.admindashboard.update',compact('admindashboard', 'pList'));
     }
 

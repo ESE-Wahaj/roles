@@ -21,9 +21,7 @@
         <label>Address</label><br>
         <input type="text" name="address" placeholder="Address" required>
         <br>
-        @foreach($pList as $list)
-        <input type="radio" name="primary_id" value="{{$list->id}}" checked>{{$list->name}}
-        @endforeach
+
         <br>
         <select name="choose" id="choose">
             @foreach($pList as $list)
@@ -32,7 +30,7 @@
         </select>
         <button type="submit">Submit</button>
         <br>
-        <a href="{{route('admindashboard.read')}}">View admindashboards</a>
+        <a href="{{route('dashboards.admindashboard.read')}}">View admindashboards</a>
     </form>
     <form method="POST" action="/logout">
         @csrf
