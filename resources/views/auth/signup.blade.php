@@ -1,6 +1,6 @@
 
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,7 +23,7 @@
     </form>
     <a href="/login">Login</a>
 </body>
-</html> -->
+</html>
 
 
 
@@ -51,7 +51,7 @@
 
 
 
-
+<!-- 
 
 
 <!DOCTYPE html>
@@ -361,4 +361,4 @@
         </div>
     </div>
 </body>
-</html>
+</html> -->

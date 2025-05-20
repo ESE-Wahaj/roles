@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
     </form>
     <a href="/signup">Signup</a>
 </body>
-</html> -->
+</html>
 
 
 
@@ -53,7 +53,7 @@
 
 
 
-
+<!-- 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -333,4 +333,4 @@
         </div>
     </div>
 </body>
-</html>
+</html> -->

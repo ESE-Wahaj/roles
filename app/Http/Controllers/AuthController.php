@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\SuoerAdmin;
 
 class AuthController extends Controller
 {
      public function showLogin()
     {
-        return view('auth.login');
+        $pList = SuoerAdmin::all();
+        return view('auth.login', compact('pList'));
     }
 
     public function showSignup()
@@ -29,11 +31,11 @@ class AuthController extends Controller
         ]);
 
         User::create([
-    'name' => $request->name,
-    'email' => $request->email,
-    'password' => Hash::make($request->password),
-    'role' => $request->role
-]);
+             'name' => $request->name,
+             'email' => $request->email,
+             'password' => Hash::make($request->password),
+             'role' => $request->role
+        ]);
         
         return redirect('/login')->with('success', 'Account created successfully');
     }
@@ -48,9 +50,9 @@ class AuthController extends Controller
         if (Auth::attempt($request->only('email', 'password'))) {
             
             $user = Auth::user();
-            
+            $pList = SuoerAdmin::all();
             if ($user->role === 'admin') {
-                return redirect('/admin/dashboard');
+                return view('dashboards.admindashboard.create', compact('pList'));
             } elseif ($user->role === 'super-admin') {
                 return redirect('/super-admin/dashboard');
             }
