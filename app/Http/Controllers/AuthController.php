@@ -52,7 +52,7 @@ class AuthController extends Controller
             $user = Auth::user();
             $pList = SuoerAdmin::all();
             if ($user->role === 'admin') {
-                return view('dashboards.admindashboard.create', compact('pList'));
+                 return redirect('/admin/dashboard');
             } elseif ($user->role === 'super-admin') {
                 return redirect('/super-admin/dashboard');
             }

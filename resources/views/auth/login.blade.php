@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,6 +17,71 @@
         <button type="submit">Login</button>
     </form>
     <a href="/signup">Signup</a>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md border border-gray-300">
+    <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-6 tracking-tight">
+      Login to Your Account
+    </h2>
+
+    @if (session('success'))
+      <div class="mb-4 bg-gray-100 border border-gray-400 text-gray-800 p-3 rounded">
+        {{ session('success') }}
+      </div>
+    @endif
+
+    <form method="POST" action="/login" class="space-y-6">
+      @csrf
+      <div>
+        <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="you@example.com"
+          required
+          class="w-full px-4 py-3 border border-gray-400 rounded-lg text-gray-900 placeholder-gray-500
+                 focus:outline-none focus:ring-2 focus:ring-black focus:border-black transition"
+        />
+      </div>
+      <div>
+        <label for="password" class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="********"
+          required
+          class="w-full px-4 py-3 border border-gray-400 rounded-lg text-gray-900 placeholder-gray-500
+                 focus:outline-none focus:ring-2 focus:ring-black focus:border-black transition"
+        />
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
+      >
+        Login
+      </button>
+    </form>
+
+    <p class="text-center text-sm text-gray-600 mt-8">
+      Don't have an account?
+      <a href="/signup" class="text-gray-900 font-semibold hover:underline">Sign up here</a>
+    </p>
+  </div>
+
 </body>
 </html>
 

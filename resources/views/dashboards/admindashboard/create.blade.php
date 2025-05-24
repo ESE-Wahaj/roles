@@ -30,7 +30,7 @@
         </select>
         <button type="submit">Submit</button>
         <br>
-        <a href="{{route('dashboards.admindashboard.read')}}">View admindashboards</a>
+
     </form>
     <form method="POST" action="/logout">
         @csrf

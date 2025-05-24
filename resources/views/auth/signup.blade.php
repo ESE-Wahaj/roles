@@ -1,6 +1,6 @@
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,8 +23,51 @@
     </form>
     <a href="/login">Login</a>
 </body>
-</html>
+</html> -->
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black min-h-screen flex items-center justify-center">
+
+    <div class="border border-black p-8 rounded-lg w-full max-w-md shadow-lg">
+        <h2 class="text-3xl font-bold text-center mb-6">Signup</h2>
+
+        <form method="POST" action="/signup" class="space-y-4">
+            @csrf
+            <input type="text" name="name" placeholder="Name" required
+                   class="w-full px-4 py-2 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black">
+            <input type="email" name="email" placeholder="Email" required
+                   class="w-full px-4 py-2 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black">
+            <input type="password" name="password" placeholder="Password" required
+                   class="w-full px-4 py-2 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black">
+            <select name="role" required
+                    class="w-full px-4 py-2 border border-black rounded bg-white text-black focus:outline-none focus:ring-2 focus:ring-black">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+                <option value="super-admin">Super Admin</option>
+            </select>
+            <button type="submit"
+                    class="w-full py-2 border border-black rounded bg-black text-white hover:bg-white hover:text-black transition">
+                Signup
+            </button>
+        </form>
+
+        <p class="text-center mt-6 text-sm">
+            Already have an account?
+            <a href="/login" class="underline hover:text-gray-700">Login here</a>
+        </p>
+    </div>
+
+</body>
+</html>
 
 
 

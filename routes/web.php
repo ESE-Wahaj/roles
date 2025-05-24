@@ -49,9 +49,9 @@ Route::get('/user/dashboard', function () {
 })->middleware('auth');
 
 Route::get('/admin/dashboard', function () {
-    return view('dashboards.admindashboard.create');
+    return view('dashboards.admin');
 })->middleware('auth');
 
 Route::get('/super-admin/dashboard', function () {
-    return view('dashboards.superadmindashboard.create');
+    return view('dashboards.super-admin');
 })->middleware('auth');
