@@ -15,6 +15,53 @@
 </html> -->
 
 
+@extends('layouts.app')
+
+@section('content')
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Card 1</h5>
+                    <p class="card-text">Some dummy data</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Card 2</h5>
+                    <p class="card-text">Some dummy data</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Card 3</h5>
+                    <p class="card-text">Some dummy data</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Card 4</h5>
+                    <p class="card-text">Some dummy data</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics Chart Card -->
+    <div class="card mb-4">
+        <div class="card-header">Analytics Chart</div>
+        <div class="card-body">
+            <p>This is a placeholder for the chart.</p>
+            <div style="height:300px; background-color: #e0e0e0;"></div>
+        </div>
+    </div>
+@endsection
 
 
 
@@ -48,7 +95,7 @@
 
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -67,4 +114,4 @@
         </form>
     </div>
 </body>
-</html>
+</html> -->
