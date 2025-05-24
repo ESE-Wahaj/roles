@@ -12,8 +12,8 @@ class AuthController extends Controller
 {
      public function showLogin()
     {
-        $pList = SuoerAdmin::all();
-        return view('auth.login', compact('pList'));
+      
+        return view('auth.login');
     }
 
     public function showSignup()

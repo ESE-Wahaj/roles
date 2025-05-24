@@ -20,20 +20,20 @@ Route::get('/', function () {
 
 
 
-Route::get('/1',[SuoerAdminController::class,'index'])->name('dashboards.superadmindashboard.create');
-Route::post('/store',[SuoerAdminController::class,'store'])->name('dashboards.superadmindashboard.post');
-Route::get('/read',[SuoerAdminController::class,'show'])->name('dashboards.superadmindashboard.read');
-Route::post('/edit',[SuoerAdminController::class,'edit'])->name('dashboards.superadmindashboard.edit');
-Route::post('/update',[SuoerAdminController::class,'update'])->name('dashboards.superadmindashboard.update');
-Route::post('/delete',[SuoerAdminController::class,'destroy'])->name('dashboards.superadmindashboard.delete');
+Route::get('/super-admin/dashboard/1',[SuoerAdminController::class,'index'])->name('dashboards.superadmindashboard.create');
+Route::post('/super-admin/dashboard/store',[SuoerAdminController::class,'store'])->name('dashboards.superadmindashboard.post');
+Route::get('/super-admin/dashboard/read',[SuoerAdminController::class,'show'])->name('dashboards.superadmindashboard.read');
+Route::post('/super-admin/dashboard/edit',[SuoerAdminController::class,'edit'])->name('dashboards.superadmindashboard.edit');
+Route::post('/super-admin/dashboard/update',[SuoerAdminController::class,'update'])->name('dashboards.superadmindashboard.update');
+Route::post('/super-admin/dashboard/delete',[SuoerAdminController::class,'destroy'])->name('dashboards.superadmindashboard.delete');
 
 
 Route::get('/2',[AdminController::class,'index'])->name('dashboards.admindashboard.create');
-Route::post('/2store',[AdminController::class,'store'])->name('dashboards.admindashboard.post');
-Route::get('/2read',[AdminController::class,'show'])->name('dashboards.admindashboard.read');
-Route::post('/2edit',[AdminController::class,'edit'])->name('dashboards.admindashboard.edit');
-Route::post('/2update',[AdminController::class,'update'])->name('dashboards.admindashboard.update');
-Route::post('/2delete',[AdminController::class,'destroy'])->name('dashboards.admindashboard.delete');
+Route::post('/admin/dashboard/store',[AdminController::class,'store'])->name('dashboards.admindashboard.post');
+Route::get('//admin/dashboard',[AdminController::class,'show'])->name('dashboards.admindashboard.read');
+Route::post('/admin/dashboard/edit',[AdminController::class,'edit'])->name('dashboards.admindashboard.edit');
+Route::post('/admin/dashboard/update',[AdminController::class,'update'])->name('dashboards.admindashboard.update');
+Route::post('/admin/dashboard/delete',[AdminController::class,'destroy'])->name('dashboards.admindashboard.delete');
 
 
 
